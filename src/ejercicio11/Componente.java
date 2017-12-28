@@ -1,6 +1,7 @@
 package ejercicio11;
 
 public class Componente {
+	
 	private String nombre;
 	private String modelo;
 	private double precio;
