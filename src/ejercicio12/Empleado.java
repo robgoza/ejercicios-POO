@@ -1,11 +1,30 @@
 package ejercicio12;
 
+/**
+ * Clase que modeliza un empleado de la empresa
+ * 
+ * @author robgoza
+ *
+ */
 public class Empleado {
+
 	private String nombre;
 	private int edad;
 	private String nif;
 	private double sueldo;
 
+	/**
+	 * Constructor de la clase
+	 * 
+	 * @param nombre
+	 *            el nombre del empleado
+	 * @param edad
+	 *            la edad del empleado
+	 * @param nif
+	 *            el NIF del empleado
+	 * @param sueldo
+	 *            el sueldo del empleado
+	 */
 	public Empleado(String nombre, int edad, String nif, double sueldo) {
 		this.nombre = nombre;
 		this.edad = edad;
@@ -13,10 +32,16 @@ public class Empleado {
 		this.sueldo = sueldo;
 	}
 
+	/**
+	 * Metodo que calcula el sueldo del empleado
+	 * 
+	 * @return el sueldo
+	 */
 	public double calcularSueldo() {
 		return sueldo;
 	}
 
+	// Getters y Setters (sin javadoc)
 	/**
 	 * @param sueldo
 	 *            the sueldo to set
@@ -30,7 +55,6 @@ public class Empleado {
 	 */
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return super.toString();
 	}
 
