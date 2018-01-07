@@ -10,18 +10,18 @@ import java.util.ArrayList;
  * @param <E>
  *            el elemento
  */
-public class Buffer<E extends Entrada> {
-	private ArrayList<E> bufferAlta;
-	private ArrayList<E> bufferMedia;
-	private ArrayList<E> bufferBaja;
+public class Buffer<E> extends Elemento {
+	private ArrayList<Elemento> bufferAlta;
+	private ArrayList<Elemento> bufferMedia;
+	private ArrayList<Elemento> bufferBaja;
 
 	/**
 	 * Metodo constructor
 	 */
 	public Buffer() {
-		bufferAlta = new ArrayList<E>();
-		bufferMedia = new ArrayList<E>();
-		bufferBaja = new ArrayList<E>();
+		bufferAlta = new ArrayList<Elemento>();
+		bufferMedia = new ArrayList<Elemento>();
+		bufferBaja = new ArrayList<Elemento>();
 
 	}
 
@@ -32,7 +32,7 @@ public class Buffer<E extends Entrada> {
 	 *            el elemento a insertar
 	 * @assertion.pre el elemento no puede ser nulo
 	 */
-	public void insertar(E elem) {
+	public void insertar(Elemento elem) {
 		assert (elem != null);
 		switch (elem.getPrioridad()) {
 		case 0:
@@ -68,7 +68,7 @@ public class Buffer<E extends Entrada> {
 	 * 
 	 * @return el primer elemento del buffer
 	 */
-	public E primero() {
+	public Elemento primero() {
 		if (!bufferAlta.isEmpty()) {
 			return bufferAlta.get(0);
 		} else if (!bufferMedia.isEmpty()) {
@@ -90,4 +90,5 @@ public class Buffer<E extends Entrada> {
 			return false;
 		}
 	}
+
 }
